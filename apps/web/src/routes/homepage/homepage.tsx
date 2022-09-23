@@ -1,7 +1,7 @@
-import { SideNavBar } from "../../components/sideNavbar";
+import { SideNavBar } from "@/components/sideNavbar";
 import React from "react";
 import { Box, Grid } from "@chakra-ui/react";
-import { Timeline } from "../../components/timeline";
+import { Timeline } from "@/components/timeline";
 import { FeatureSidebar } from "../../components/featureSidebar";
 
 export const Homepage = () => {
@@ -25,7 +25,7 @@ export const Homepage = () => {
         <SideNavBar />
       </Box>
       <Box gridArea="timeline" bg="red.500">
-        rightcard
+        <Timeline />
       </Box>
       <Box gridArea="featureSidebar" bg="yellow.500">
         <SideNavBar />

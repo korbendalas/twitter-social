@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
-import { Wrap } from "./wrap";
+import { Wrap } from "@/wrap";
 
 ReactDOM.render(<Wrap />, document.getElementById("root"));
 

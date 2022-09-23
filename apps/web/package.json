@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@chakra-ui/react": "^2.3.4",
+    "@craco/craco": "^6.4.5",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
     "@tanstack/react-query": "^4.3.9",
