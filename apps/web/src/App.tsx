@@ -1,12 +1,13 @@
 import React from "react";
 import "./App.css";
-import { Main } from "./components/main";
+import { AppProvider } from "@/providers/appProvider";
+import { AppRoutes } from "@/routes";
 
 function App() {
   return (
-    <div>
-      <Main />{" "}
-    </div>
+    <AppProvider>
+      <AppRoutes />
+    </AppProvider>
   );
 }
 
