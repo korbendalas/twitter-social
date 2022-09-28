@@ -1,6 +1,6 @@
 import clsx from "clsx";
 
-export const RegisterForm = ({ className }: { className: string }) => {
+export const RegisterForm = ({ className }: { className?: string }) => {
   return (
     <div className={clsx("", className)}>
       <h1 className="text-[64px] text-[#E7E9EA]">Happening now</h1>
@@ -34,8 +34,8 @@ export const RegisterForm = ({ className }: { className: string }) => {
               </div>
 
               <div>
-                <label htmlFor="mobile-or-email" className="sr-only">
-                  Mobile number or email
+                <label htmlFor="email" className="sr-only">
+                  Email
                 </label>
                 <input
                   type="text"

@@ -5,8 +5,9 @@
 //   "AuthRoutes"
 // );
 
-import { AuthRoutes } from "@/features/auth/routes";
-import { Register } from "@/features/auth/routes/register";
+// import { AuthRoutes } from "@/features/auth/routes";
+import { LoginRegisterPage } from "@/features/auth/components/loginRegisterPage";
+// import { Register } from "@/features/auth/routes/register";
 
 // export const publicRoutes = [
 //   {
@@ -18,6 +19,6 @@ import { Register } from "@/features/auth/routes/register";
 export const publicRoutes = [
   {
     path: "/",
-    element: <Register />,
+    element: <LoginRegisterPage />,
   },
 ];
