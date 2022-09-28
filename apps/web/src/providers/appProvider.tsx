@@ -4,6 +4,9 @@ import { HelmetProvider } from "react-helmet-async";
 import { QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
 import { BrowserRouter as Router } from "react-router-dom";
+import { AuthProvider } from "@/context/auth/authContextProvider";
+import { queryClient } from "@/lib/react-query";
+import { Spinner } from "@/components/elements";
 
 // import { Button, Spinner } from "@/components/Elements";
 // import { Notifications } from "@/components/Notifications/Notifications";
@@ -36,21 +39,19 @@ export const AppProvider = ({ children }: AppProviderProps) => {
     <React.Suspense
       fallback={
         <div className="flex items-center justify-center w-screen h-screen">
-          {/*<Spinner size="xl" />*/} Loading
+          <Spinner size="xl" />
         </div>
       }
     >
       <ErrorBoundary FallbackComponent={ErrorFallback}>
         <HelmetProvider>
-          {/*<QueryClientProvider client={queryClient}>*/}
-          {/*  {process.env.NODE_ENV !== "test" && <ReactQueryDevtools />}*/}
-          {/*  /!*<Notifications />*!/*/}
-          {/*  <AuthProvider>*/}
-          {/*    <Router>{children}</Router>*/}
-          {/*  </AuthProvider>*/}
-          {/*</QueryClientProvider>*/}
-
-          <Router>{children}</Router>
+          <QueryClientProvider client={queryClient}>
+            {process.env.NODE_ENV !== "test" && <ReactQueryDevtools />}
+            {/*<Notifications />*/}
+            <AuthProvider>
+              <Router>{children}</Router>
+            </AuthProvider>
+          </QueryClientProvider>
         </HelmetProvider>
       </ErrorBoundary>
     </React.Suspense>

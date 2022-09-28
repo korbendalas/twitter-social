@@ -6,10 +6,18 @@
 // );
 
 import { AuthRoutes } from "@/features/auth/routes";
+import { Register } from "@/features/auth/routes/register";
+
+// export const publicRoutes = [
+//   {
+//     path: "/auth/*",
+//     element: <AuthRoutes />,
+//   },
+// ];
 
 export const publicRoutes = [
   {
-    path: "/auth/*",
-    element: <AuthRoutes />,
+    path: "/",
+    element: <Register />,
   },
 ];

@@ -1,15 +1,4 @@
-import { AuthContextValue } from "@/hooks/auth/useAuth";
 import React from "react";
-import { AuthUser } from "@/features/auth/types";
-import {
-  LoginCredentialsDTO,
-  RegisterCredentialsDTO,
-} from "@/features/auth/api";
+import { AuthUser, AuthContextValue } from "@/features/auth/types";
 
-export const AuthContext = React.createContext<AuthContextValue<
-  AuthUser | null,
-  Error | null,
-  LoginCredentialsDTO,
-  RegisterCredentialsDTO
-> | null>(null);
-AuthContext.displayName = "AuthContext";
+export const AuthContext = React.createContext<AuthContextValue | null>(null);
